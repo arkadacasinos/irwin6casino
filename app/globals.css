@@ -1,0 +1,362 @@
+@import 'tailwindcss';
+
+:root {
+  --irw-bg: #1a1a1e;
+  --irw-fg: #f5f5f5;
+  --irw-accent: #00ff88;
+  --irw-secondary: #2a2a2f;
+  --irw-border: #3a3a3f;
+  --irw-text-muted: #a8a8b0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--irw-bg);
+  color: var(--irw-fg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--irw-bg);
+  color: var(--irw-fg);
+  font-size: 16px;
+}
+
+/* Header */
+.irw_header {
+  background: linear-gradient(135deg, var(--irw-secondary) 0%, var(--irw-bg) 100%);
+  border-bottom: 2px solid var(--irw-border);
+  padding: 2rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.irw_nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.irw_brand {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--irw-accent), #00cc6a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.irw_tagline {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: var(--irw-text-muted);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+/* Main Content */
+.irw_main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Hero Section */
+.irw_hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 3rem 0;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .irw_hero {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.irw_hero_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.irw_hero_image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--irw-border);
+  display: block;
+  background: var(--irw-secondary);
+}
+
+.irw_intro {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.8;
+  color: var(--irw-fg);
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+/* Sections */
+.irw_section {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--irw-border);
+  scroll-margin-top: 80px;
+}
+
+.irw_section:last-of-type {
+  border-bottom: none;
+}
+
+/* Headings */
+.irw_h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  color: var(--irw-accent);
+  letter-spacing: -0.01em;
+}
+
+.irw_h2_cta {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  color: var(--irw-fg);
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+/* Paragraphs */
+.irw_paragraph {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--irw-fg);
+  text-align: justify;
+  margin-bottom: 1.5rem;
+  text-align-last: left;
+}
+
+/* CTA Section */
+.irw_cta_section {
+  padding: 3rem 0;
+  margin: 3rem 0;
+}
+
+.irw_cta_box {
+  background: linear-gradient(135deg, var(--irw-secondary) 0%, var(--irw-bg) 100%);
+  border: 2px solid var(--irw-accent);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 255, 136, 0.1);
+}
+
+.irw_cta_text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--irw-fg);
+  margin: 1.5rem 0;
+}
+
+.irw_cta_button {
+  background: linear-gradient(135deg, var(--irw-accent), #00cc6a);
+  color: #000;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+}
+
+.irw_cta_button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 255, 136, 0.5);
+}
+
+.irw_cta_button:active {
+  transform: translateY(0);
+}
+
+/* Footer */
+.irw_footer {
+  background: var(--irw-secondary);
+  border-top: 2px solid var(--irw-border);
+  padding: 3rem 1rem;
+  margin-top: 4rem;
+}
+
+.irw_footer_content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.irw_footer_disclaimer {
+  font-size: 0.9rem;
+  color: var(--irw-text-muted);
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.irw_footer_nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.irw_footer_link {
+  color: var(--irw-accent);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.irw_footer_link:hover {
+  color: #00cc6a;
+}
+
+/* Hashtags */
+.irw_hashtag_label {
+  font-size: 0.9rem;
+  color: var(--irw-text-muted);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.irw_hashtag_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.irw_hashtag {
+  display: inline-block;
+  background: var(--irw-bg);
+  border: 1px solid var(--irw-border);
+  color: var(--irw-accent);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: all 0.2s ease;
+}
+
+.irw_hashtag:hover {
+  border-color: var(--irw-accent);
+  background: rgba(0, 255, 136, 0.05);
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Lazy Loading */
+img[loading='lazy'] {
+  background: var(--irw-secondary);
+}
+
+/* Link Styles */
+a {
+  color: var(--irw-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00cc6a;
+}
+
+/* Selection */
+::selection {
+  background: var(--irw-accent);
+  color: #000;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .irw_header {
+    padding: 1.5rem 1rem;
+  }
+
+  .irw_main {
+    padding: 0 1rem;
+  }
+
+  .irw_section {
+    padding: 1.5rem 0;
+  }
+
+  .irw_paragraph {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .irw_cta_box {
+    padding: 2rem 1.5rem;
+  }
+
+  .irw_footer {
+    padding: 2rem 1rem;
+  }
+
+  .irw_footer_nav {
+    gap: 0.75rem;
+  }
+
+  .irw_hashtag_list {
+    gap: 0.75rem;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  .irw_section {
+    padding: 2rem 0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  body {
+    font-size: 16px;
+  }
+
+  .irw_section {
+    padding: 3rem 0;
+  }
+
+  .irw_cta_box {
+    padding: 4rem 3rem;
+  }
+}
